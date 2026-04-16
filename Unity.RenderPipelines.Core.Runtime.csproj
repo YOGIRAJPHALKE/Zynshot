@@ -36,7 +36,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.26</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.27</UnityProjectGeneratorVersion>
     <UnityProjectGeneratorStyle>SDK</UnityProjectGeneratorStyle>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
@@ -103,8 +103,8 @@
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@04ab0eefa0c3\Runtime\Upscaling\DLSSOptions.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@04ab0eefa0c3\Runtime\Debugging\Prefabs\Scripts\DebugUIHandlerRenderingLayerField.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@04ab0eefa0c3\Runtime\Lighting\ProbeVolume\ProbeVolumePositioning.cs" />
-    <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@04ab0eefa0c3\Runtime\Textures\MSAASamples.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@04ab0eefa0c3\Runtime\Common\ReloadGroupAttribute.cs" />
+    <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@04ab0eefa0c3\Runtime\Textures\MSAASamples.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@04ab0eefa0c3\Runtime\Lighting\ProbeVolume\IProbeVolumeEnabledRenderPipeline.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@04ab0eefa0c3\Runtime\RenderGraph\RenderGraphUtilsResources.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@04ab0eefa0c3\Runtime\Textures\PowerOfTwoTextureAtlas.cs" />
@@ -951,6 +951,10 @@
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@d8c07649098d\net40\unity-custom\nunit.framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReportGeneratorMerged">
+      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@19a841221620\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">

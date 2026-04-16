@@ -36,7 +36,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.26</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.27</UnityProjectGeneratorVersion>
     <UnityProjectGeneratorStyle>SDK</UnityProjectGeneratorStyle>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
@@ -50,8 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@37e0d4fc2503\Runtime\Overrides\ColorAdjustments.cs" />
-    <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@37e0d4fc2503\Runtime\Passes\ScreenSpaceAmbientOcclusionPass.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@37e0d4fc2503\Runtime\Decal\Entities\DecalEntityManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@37e0d4fc2503\Runtime\Passes\ScreenSpaceAmbientOcclusionPass.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@37e0d4fc2503\Runtime\Overrides\ScreenSpaceLensFlare.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@37e0d4fc2503\Runtime\History\RawColorHistory.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@37e0d4fc2503\Runtime\RTHandleUtils.cs" />
@@ -833,6 +833,10 @@
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@d8c07649098d\net40\unity-custom\nunit.framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReportGeneratorMerged">
+      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@19a841221620\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">

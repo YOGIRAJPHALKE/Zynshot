@@ -36,7 +36,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.26</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.27</UnityProjectGeneratorVersion>
     <UnityProjectGeneratorStyle>SDK</UnityProjectGeneratorStyle>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
@@ -49,16 +49,16 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.10f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.ai.navigation@c33a115e9883\Runtime\NavMeshLink.cs" />
-    <Compile Include="Library\PackageCache\com.unity.ai.navigation@c33a115e9883\Runtime\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.ai.navigation@c33a115e9883\Runtime\NavMeshSurface.cs" />
-    <Compile Include="Library\PackageCache\com.unity.ai.navigation@c33a115e9883\Runtime\NavMeshLink.deprecated.cs" />
-    <Compile Include="Library\PackageCache\com.unity.ai.navigation@c33a115e9883\Runtime\NavMeshModifier.cs" />
-    <Compile Include="Library\PackageCache\com.unity.ai.navigation@c33a115e9883\Runtime\HelpUrls.cs" />
-    <Compile Include="Library\PackageCache\com.unity.ai.navigation@c33a115e9883\Runtime\NavMeshModifierVolume.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ai.navigation@78534c21b27d\Runtime\NavMeshLink.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ai.navigation@78534c21b27d\Runtime\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ai.navigation@78534c21b27d\Runtime\NavMeshSurface.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ai.navigation@78534c21b27d\Runtime\NavMeshLink.deprecated.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ai.navigation@78534c21b27d\Runtime\NavMeshModifier.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ai.navigation@78534c21b27d\Runtime\HelpUrls.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ai.navigation@78534c21b27d\Runtime\NavMeshModifierVolume.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.ai.navigation@c33a115e9883\Runtime\Unity.AI.Navigation.asmdef" />
+    <None Include="Library\PackageCache\com.unity.ai.navigation@78534c21b27d\Runtime\Unity.AI.Navigation.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -619,6 +619,10 @@
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@d8c07649098d\net40\unity-custom\nunit.framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReportGeneratorMerged">
+      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@19a841221620\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
