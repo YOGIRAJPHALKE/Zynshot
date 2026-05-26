@@ -1531,7 +1531,7 @@ Transform:
   m_GameObject: {fileID: 1912673772}
   serializedVersion: 2
   m_LocalRotation: {x: -0.07649631, y: 0.6497913, z: -0.046684787, w: 0.75481135}
-  m_LocalPosition: {x: 0.5489164, y: 0.29459763, z: 0.13579082}
+  m_LocalPosition: {x: 0.59, y: 0.29459763, z: 0.13579082}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1551,6 +1551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972f4402901a8f04f85c9c39c2185295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wepon
+  hitVFXPrefab: {fileID: 5636891028780307915, guid: 8df4f7def980e7d4699ca6841176d3a6, type: 3}
   animator: {fileID: 2011149378}
   muzzelFlash: {fileID: 7282232234859290638}
   damageAmount: 1
@@ -1579,14 +1580,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011149376}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.02058707, y: 0, z: 0, w: 0.999788}
-  m_LocalPosition: {x: -0.002000004, y: 0.03601694, z: 0.02817643}
+  m_LocalRotation: {x: 0.07577891, y: -0, z: -0, w: 0.9971246}
+  m_LocalPosition: {x: 0.04, y: 0.05, z: 0.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1912673773}
   m_Father: {fileID: 1095429488}
-  m_LocalEulerAnglesHint: {x: 2.359, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 8.692, y: 0, z: 0}
 --- !u!95 &2011149378
 Animator:
   serializedVersion: 7
@@ -1779,7 +1780,7 @@ PrefabInstance:
     - target: {fileID: 3048234931957103056, guid: 990e2b3b43d5ca74990e483db3dc4e51, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: f1b0fea076fb0574d868f6e3d9523f52, type: 2}
+      objectReference: {fileID: 2100000, guid: a0dd3b0343627764abb17a15e698f00c, type: 2}
     - target: {fileID: 3997437138612117532, guid: 990e2b3b43d5ca74990e483db3dc4e51, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.05
@@ -1906,7 +1907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8754948903305059057, guid: 990e2b3b43d5ca74990e483db3dc4e51, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
