@@ -1,12 +1,14 @@
 using UnityEngine;
+using Unity.Mathematics;
 using StarterAssets;
 
 public class Wepon : MonoBehaviour
 {
+    [SerializeField] WeaponSO weaponSO; 
     [SerializeField] GameObject hitVFXPrefab;
     [SerializeField] Animator animator;
     [SerializeField] ParticleSystem muzzelFlash;
-    [SerializeField] int damageAmount= 1;
+    //[SerializeField] int damageAmount= 1;
 
     StarterAssetsInputs starterAssetsInputs;
 
@@ -36,7 +38,7 @@ public class Wepon : MonoBehaviour
         {
             Instantiate(hitVFXPrefab, hit.point, Quaternion.identity);
             EnemyHelth enemyHealth = hit.collider.GetComponent<EnemyHelth>();
-            enemyHealth?.TakeDamage(damageAmount);
+            enemyHealth?.TakeDamage(weaponSO.Damage);
 
 
             // if(enemyHealth)

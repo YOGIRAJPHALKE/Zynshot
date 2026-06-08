@@ -52,6 +52,7 @@
     <Compile Include="Assets\Imported Assets\StarterAssets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Imported Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
     <Compile Include="Assets\Scripts\Wepon.cs" />
+    <Compile Include="Assets\Scripts\WeaponSO.cs" />
     <Compile Include="Assets\Imported Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
     <Compile Include="Assets\Imported Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Imported Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs" />
