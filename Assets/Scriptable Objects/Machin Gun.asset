@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Machin Gun
   m_EditorClassIdentifier: Assembly-CSharp::WeaponSO
   Damage: 1
-  FireRate: 0.5
+  FireRate: 0.2
+  HitVFXPrefab: {fileID: 0}
