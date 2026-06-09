@@ -29,6 +29,11 @@ public class ActiveWeapon : MonoBehaviour
         HandleShoot();
     }
 
+    public void SwitchWeapon(WeaponSO weaponSO)
+    {
+        Debug.Log("Player piked up "+ weaponSO.name);
+    }
+
     void HandleShoot()
     {
         if (!starterAssetsInputs.shoot) return;
@@ -39,6 +44,10 @@ public class ActiveWeapon : MonoBehaviour
             animator.Play(SHOOT_STRING, 0, 0f);
             timeSinceLastShoot = 0f;
         }
-        starterAssetsInputs.ShootInput(false);
+
+        if(!weaponSO.isAutomatic)
+        {     
+            starterAssetsInputs.ShootInput(false);
+        }
     }
 }

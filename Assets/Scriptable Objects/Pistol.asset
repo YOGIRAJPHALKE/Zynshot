@@ -15,3 +15,4 @@ MonoBehaviour:
   Damage: 2
   FireRate: 0.5
   HitVFXPrefab: {fileID: 5636891028780307915, guid: 8df4f7def980e7d4699ca6841176d3a6, type: 3}
+  isAutomatic: 0
