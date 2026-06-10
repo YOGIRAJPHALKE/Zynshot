@@ -31,7 +31,14 @@ public class ActiveWeapon : MonoBehaviour
 
     public void SwitchWeapon(WeaponSO weaponSO)
     {
-        Debug.Log("Player piked up "+ weaponSO.name);
+        if(currentWeapon)
+        {
+            Destroy(currentWeapon.gameObject);
+        }
+
+        Wepon newWeapon = Instantiate(weaponSO.weaponePrefab, transform).GetComponent<Wepon>();
+        currentWeapon = newWeapon;
+        this.weaponSO= weaponSO;
     }
 
     void HandleShoot()
