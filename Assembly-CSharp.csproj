@@ -53,12 +53,14 @@
     <Compile Include="Assets\Imported Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
     <Compile Include="Assets\Scripts\Wepon.cs" />
     <Compile Include="Assets\Scripts\WeaponSO.cs" />
+    <Compile Include="Assets\Scripts\Pickups\WeaponPickup.cs" />
     <Compile Include="Assets\Imported Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
     <Compile Include="Assets\Imported Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Imported Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs" />
-    <Compile Include="Assets\Scripts\WeaponPickup.cs" />
     <Compile Include="Assets\Imported Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
     <Compile Include="Assets\Scripts\Robot.cs" />
+    <Compile Include="Assets\Scripts\Pickups\Pickup.cs" />
+    <Compile Include="Assets\Scripts\Pickups\AmmoPickup.cs" />
     <Compile Include="Assets\Imported Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
     <Compile Include="Assets\Scripts\ActiveWeapon.cs" />
     <Compile Include="Assets\Imported Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
