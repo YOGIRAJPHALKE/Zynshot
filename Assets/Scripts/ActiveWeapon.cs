@@ -10,6 +10,7 @@ public class ActiveWeapon : MonoBehaviour
     [SerializeField] GameObject zoomVignette; 
 
     Animator animator;
+    
     StarterAssetsInputs starterAssetsInputs;
     FirstPersonController firstPersonController;
     Wepon currentWeapon;
