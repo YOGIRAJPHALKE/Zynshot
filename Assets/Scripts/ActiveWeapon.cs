@@ -1,16 +1,18 @@
 using UnityEngine;
 using StarterAssets;
 using Unity.Cinemachine;
+using TMPro;
 
 public class ActiveWeapon : MonoBehaviour
 {
     
-    [SerializeField] WeaponSO weaponSO; 
+    [SerializeField] WeaponSO startingWeapon; 
     [SerializeField] CinemachineVirtualCamera playerFollowCamera; 
     [SerializeField] GameObject zoomVignette; 
+    [SerializeField] TMP_Text ammoText; 
 
+    WeaponSO weaponSO; 
     Animator animator;
-    
     StarterAssetsInputs starterAssetsInputs;
     FirstPersonController firstPersonController;
     Wepon currentWeapon;
@@ -20,6 +22,7 @@ public class ActiveWeapon : MonoBehaviour
     float timeSinceLastShoot= 0f;
     float defaultFOV;
     float defaultRotationSpeed;
+    int currentAmmo;
 
     void Awake() 
     {
@@ -31,12 +34,26 @@ public class ActiveWeapon : MonoBehaviour
     } 
     void Start() 
     {
-        currentWeapon = GetComponentInChildren<Wepon>();  
+        SwitchWeapon(startingWeapon);
+        AdjustAmmo(weaponSO.MagazineSize);
+       // currentWeapon = GetComponentInChildren<Wepon>();  
+
     }
     void Update()
     {
         HandleShoot();
         HandleZoom();
+    }
+
+    public void AdjustAmmo(int amount)
+    {
+        currentAmmo += amount;
+        if(currentAmmo > weaponSO.MagazineSize)
+        {
+            currentAmmo = weaponSO.MagazineSize;
+        }
+
+        ammoText.text =currentAmmo.ToString("D2");
     }
 
     public void SwitchWeapon(WeaponSO weaponSO)
@@ -49,6 +66,7 @@ public class ActiveWeapon : MonoBehaviour
         Wepon newWeapon = Instantiate(weaponSO.weaponePrefab, transform).GetComponent<Wepon>();
         currentWeapon = newWeapon;
         this.weaponSO= weaponSO;
+        AdjustAmmo(weaponSO.MagazineSize);
     }
 
     void HandleShoot()
@@ -57,11 +75,12 @@ public class ActiveWeapon : MonoBehaviour
 
         if (!starterAssetsInputs.shoot) return;
 
-        if(timeSinceLastShoot >= weaponSO.FireRate)
+        if(timeSinceLastShoot >= weaponSO.FireRate && currentAmmo>0)
         {
             currentWeapon.Shoot(weaponSO);
             animator.Play(SHOOT_STRING, 0, 0f);
             timeSinceLastShoot = 0f;
+            AdjustAmmo(-1);
         }
 
         if(!weaponSO.isAutomatic)
