@@ -6,8 +6,9 @@ public class Robot : MonoBehaviour
 {
     //[SerializeField] Transform target;
     FirstPersonController player;
-
     NavMeshAgent agent;
+
+    const string PLAYER_STRING = "Player";
 
     void Awake()
     {
@@ -23,5 +24,15 @@ public class Robot : MonoBehaviour
     void Update()
     {
         agent.SetDestination(player.transform.position);
+    }
+
+    void OnTriggerEnter(Collider other) 
+    {
+        if(other.CompareTag(PLAYER_STRING))
+        {
+            EnemyHelth enemyHealth = GetComponent<EnemyHelth>();
+            enemyHealth.SelfDestruct();   
+        }
+        
     }
 }
