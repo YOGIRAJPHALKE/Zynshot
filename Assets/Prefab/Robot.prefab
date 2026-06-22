@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb5be9119946df4ea335347aaf54392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHelth
+  robotExplosionVFX: {fileID: 2073349462885755597, guid: dd9c049fab5f25340908d751aab87454, type: 3}
   startingHealth: 3
 --- !u!195 &5264548895883705052
 NavMeshAgent:

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemyHelth : MonoBehaviour
 {
+    [SerializeField] GameObject robotExplosionVFX;
     [SerializeField] int startingHealth=3;
     int currentHealth;
     
@@ -16,6 +17,7 @@ public class EnemyHelth : MonoBehaviour
 
         if(currentHealth <= 0 )
         {
+            Instantiate(robotExplosionVFX,transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }
