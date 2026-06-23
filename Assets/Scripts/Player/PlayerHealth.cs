@@ -1,26 +1,31 @@
 using UnityEngine;
 using Unity.Cinemachine;
+using UnityEngine.UI;
 
 
 public class PlayerHealth : MonoBehaviour
 {
-   [SerializeField] int startingHealth=5;
+   [Range(1,10)]
+   [SerializeField] int startingHealth=7;
    [SerializeField] CinemachineCamera deathVirtualCamera;
    [SerializeField] Transform weaponCamera;
+   [SerializeField] Image[] shildBars;
+
 
     int currentHealth;
-    int gameOverVirtualCameraPriority = 20;
+    // int gameOverVirtualCameraPriority = 20;
 
     
     void Awake()
     {
        currentHealth = startingHealth;
+       AdjustSheildUI();
     }
 
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
-        Debug.Log(amount + "DamageTaken");
+        AdjustSheildUI();
 
         if(currentHealth <= 0 )
         {
@@ -29,5 +34,21 @@ public class PlayerHealth : MonoBehaviour
             // deathVirtualCamera.Priority = new PrioritySettings { Value = 20 };
             Destroy(this.gameObject);
         }
+    }
+    void AdjustSheildUI()
+    {
+        for (int i = 0; i < shildBars.Length; i++)
+        {
+            if(i<currentHealth)
+            {
+                shildBars[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                shildBars[i].gameObject.SetActive(false);  
+            }
+            
+        }
+
     }
 }
