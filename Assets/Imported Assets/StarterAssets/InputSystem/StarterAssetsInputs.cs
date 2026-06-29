@@ -93,6 +93,15 @@ namespace StarterAssets
 		private void SetCursorState(bool newState)
 		{
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
+
+			// if(newState)
+			// {
+			// 	Cursor.lockState = CursorLockMode.Locked;
+			// }
+			// else
+			// {
+			// 	Cursor.lockState = CursorLockMode.None;
+			// }
 		}
 	}
 	
