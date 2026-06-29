@@ -1,7 +1,7 @@
 using UnityEngine;
 using Unity.Cinemachine;
 using UnityEngine.UI;
-
+using StarterAssets;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -40,6 +40,8 @@ public class PlayerHealth : MonoBehaviour
             deathVirtualCamera.Priority = 20;
             // deathVirtualCamera.Priority = new PrioritySettings { Value = 20 };
             gameOverContainer.SetActive(true);
+            StarterAssetsInputs starterAssetsInputs = FindFirstObjectByType<StarterAssetsInputs>();
+            starterAssetsInputs.SetCursorState(false);
             Destroy(this.gameObject);
     }
 
