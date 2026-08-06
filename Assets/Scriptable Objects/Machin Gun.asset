@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Machin Gun
   m_EditorClassIdentifier: Assembly-CSharp::WeaponSO
   weaponePrefab: {fileID: 7422227368308372658, guid: 98f4012870c4bff4a876b7eeabe29b58, type: 3}
-  Damage: 1
+  Damage: 2
   FireRate: 0.07
   HitVFXPrefab: {fileID: 5636891028780307915, guid: 8df4f7def980e7d4699ca6841176d3a6, type: 3}
   isAutomatic: 1
